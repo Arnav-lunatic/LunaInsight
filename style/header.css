@@ -1,0 +1,132 @@
+header {
+    display: grid;
+    padding: 0px clamp(5px, 2vw, 40px);
+
+    margin: 0 auto;
+}
+
+.headerTitle {
+    text-align: left;
+    width: 100%;
+    font-size: clamp(2rem, 3.5vw, 3.5rem);
+}
+
+.headerTitleInfo {
+    margin-top: 20px;
+    text-align: left;
+    font-size: clamp(1rem, 1vw, 1.2rem);
+    width: 100%;
+}
+
+.newsby {
+    padding-right: 15px;
+}
+
+.newsdate {
+    opacity: .4;
+    white-space: nowrap;
+}
+
+.topNewsImage {
+    width: clamp(100px, 90vw, 440px);
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.topArticle {
+    display: grid;
+    margin-top: 50px;
+    border-bottom: 1px solid;
+    padding-bottom: clamp(20px, 10vw, 150px);
+}
+
+.topArticle p {
+    font-size: clamp(1.1em, 2.5vw, 1.5em);
+    margin: 40px 0;
+    text-align: left;
+    width: 100%;
+}
+
+@media screen and (min-width: 700px){
+    .topArticle {
+        display: flex;
+        gap: clamp(5px, 2vw, 15px);
+    }
+    .topArticle p {
+        margin: 0;
+    }
+    .topNewsImage {
+        margin: 0;
+    }
+    
+}
+
+.topArticleInfo {
+    display: grid;
+    justify-items: end;
+}
+
+.topNewsReadMoreButton{
+    display: flex;
+    align-items: center;
+    width: 95px;
+    border: 1px solid;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    height: 20px;
+    margin-right: clamp(2px, 2vw, 40px);
+}
+
+/* ========== other top news ============== */
+.otherHeaderArticle {
+
+}
+@media screen and (min-width: 900px) {
+    .otherHeaderArticle {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+}
+@media screen and (min-width:1500px) {
+    header {
+        display: flex;
+    }
+    .otherHeaderArticle {
+        grid-template-columns: 1fr;
+        border-left: 1px solid #ffffff50;
+        padding-left: clamp(5px, 2vw, 15px);
+    }
+    .topArticle {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+}
+
+.OtherArticleWrapper {
+    display: flex;
+    gap: 10px;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    margin-top: clamp(10px, 10vw, 20px);
+    text-decoration: none;
+}
+
+.otherHeaderTitle {
+    margin-bottom: 10px;
+}
+
+.otherTopNewsImage {
+    width: clamp(30px, 40vw, 210px);
+    border-radius: 7px;
+}
+
+.otherNewsby {
+    padding-right: 5px;
+}
+
+.otherNewsdate {
+    opacity: .4;
+    white-space: nowrap;
+}
