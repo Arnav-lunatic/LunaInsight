@@ -47,7 +47,7 @@ async function showNews() {
         try {
             element.src = topNewsData.results[i].media[0]['media-metadata'][1].url
         } catch (error) {
-            element.style.display = "none"
+            element.src = 'assests/no-pictures.png'
         }
         i++
     })
