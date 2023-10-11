@@ -1,7 +1,6 @@
 header {
     display: grid;
-    padding: 0px clamp(5px, 2vw, 40px);
-
+    padding: clamp(50px, 10vw, 200px) clamp(5px, 2vw, 40px);
     margin: 0 auto;
 }
 
@@ -110,7 +109,6 @@ header {
     gap: 10px;
     font-size: clamp(0.8rem, 2vw, 1rem);
     margin-top: clamp(10px, 10vw, 20px);
-    text-decoration: none;
 }
 
 .otherHeaderTitle {

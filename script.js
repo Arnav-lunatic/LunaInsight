@@ -3,7 +3,7 @@ const apiKey = 'sSasVjjGp7OnXVkkIGb0Edn8qIBZi2Jb'
 async function showNews() {
     const topNewsResponse = await fetch('https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=' + apiKey)
 
-    let topNewsData = await topNewsResponse.json()
+    const topNewsData = await topNewsResponse.json()
 
     //Injecting Data in Front article
     document.querySelector('.headerTitle').innerHTML = topNewsData.results[0].title
@@ -61,3 +61,34 @@ async function showNews() {
 }
 
 showNews()
+
+// Search
+document.querySelector('.searchButton').addEventListener('click', () => {
+    document.querySelector('.searchResult').innerHTML = ''
+    const filter = document.querySelector('.searchBar').value
+    searchKeywords(filter)
+})
+document.querySelector('.searchBar').addEventListener('keypress', (e) => {
+    if (e.key = 'Enter') {
+        document.querySelector('.searchResult').innerHTML = ''
+        const filter = document.querySelector('.searchBar').value
+        searchKeywords(filter)
+    }
+})
+
+async function searchKeywords(filter) {
+    const searchNews = await fetch(`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${filter}&api-key=` + apiKey)
+
+    const searchNewsData = await searchNews.json()
+
+    for (let i = 0; i < 10; i++) {
+        document.querySelector('.searchResult').innerHTML += `
+        <a href="${searchNewsData.response.docs[i].web_url}">
+            <div class="searchResultLink">
+                <h1 class="searchResultHeadline">${searchNewsData.response.docs[i].headline.main}</h1>
+                <p class="searchResultAbstract">${searchNewsData.response.docs[i].abstract}</p>
+            </div>
+        </a>`  
+    }    
+}
+    

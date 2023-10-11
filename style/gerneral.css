@@ -7,18 +7,6 @@
     color: #fff;
 }
 
-body {
-    padding-top: 100px;
-}
-
-@media screen and (min-width: 700px) {
-    body {
-        padding-top: 150px;
-    }
-}
-
-@media screen and (min-width: 900px) {
-    body {
-        padding-top: 200px;
-    }
+a {
+    text-decoration: none;
 }
