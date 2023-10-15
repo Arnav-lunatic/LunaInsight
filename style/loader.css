@@ -1,0 +1,73 @@
+
+
+.loader {
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    transition: .5s;
+}
+
+.LoadingAnimation {
+    display: grid;
+    grid-template-columns: 40px 40px;
+    grid-template-rows: 40px 40px;
+}
+
+.animationSec {
+    background-color: #ffffff;
+}
+.animationSec1 {
+    border-top-left-radius: 100%;
+}
+.animationSec2 {
+    border-top-right-radius: 100%;
+}
+.animationSec3 {
+    border-bottom-left-radius: 100%;
+}
+.animationSec4 {
+    border-bottom-right-radius: 100%;
+}
+
+@keyframes loading {
+    0% {
+        background-color: #fffffff5;
+    }
+    10% {
+        background-color: #ffffffc5;
+    }
+    20% {
+        background-color: #ffffff50;
+    }
+    30% {
+        background-color: #ffffff75;
+    }
+    40% {
+        background-color: #ffffff42;
+    }
+    50% {
+        background-color: #ffffff00;
+    }
+    60% {
+        background-color: #ffffff42;
+    }
+    70% {
+        background-color: #ffffff75;
+    }
+    80% {
+        background-color: #ffffff50;
+    }
+    90% {
+        background-color: #ffffffc5;
+    }
+    100% {
+        background-color: #fff;
+    }
+}
+
