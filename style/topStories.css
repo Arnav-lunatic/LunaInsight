@@ -1,5 +1,5 @@
 .topStories {
-    padding: 0 clamp(5px, 2vw, 40px);
+    padding: 0 clamp(5px, 1vw, 40px);
 }
 
 .topStoriesSectionContainer {
@@ -7,6 +7,22 @@
     overflow-x: auto;
     scroll-behavior: smooth;
 }
+/* width */
+.topStoriesSectionContainer::-webkit-scrollbar {
+    height: 2px;
+    opacity: .8;
+}
+  
+/* Track */
+.topStoriesSectionContainer::-webkit-scrollbar-track {
+    background: #555;
+}
+  
+/* Handle */
+.topStoriesSectionContainer::-webkit-scrollbar-thumb {
+    background: #f1f1f1;
+}
+  
 
 .topStoriesSection {
     background-color: #212121;
@@ -20,24 +36,18 @@
     cursor: pointer;
 }
 
-#arts {
-    margin-left: 50px;
-}
-#realestate {
-    margin-right: 50px;
-}
-
 .topStoriesSectionWrapper {
     position: relative;
 }
 
 .arrowButton {
     display: none;
+    width: 24px;
+    padding: 2px 5px;
     position: absolute;
     border: none;
-    top: 50%;
-    background-color: #fff;
-    border-radius: 50%;
+    top: 48%;
+    border-radius: 5px;
     border: 2px solid #fff;
     cursor: pointer;
 
@@ -73,6 +83,12 @@
 @media screen and (min-width: 900px) {
     .arrowButton {
         display: inline;
+    }
+    #arts {
+        margin-left: 50px;
+    }
+    #realestate {
+        margin-right: 50px;
     }
     .topStoriesWrapper {
         display: flex;

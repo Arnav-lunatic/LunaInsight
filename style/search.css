@@ -1,6 +1,6 @@
 .searchSection {
     display: grid;
-    padding: clamp(10px, 5vw, 50px) clamp(5px, 2vw, 40px);
+    padding: clamp(50px, 10vw, 150px) clamp(5px, 2vw, 40px);
     padding-bottom: clamp(5px, 5vw, 20px);
     margin: 0 auto;
 }

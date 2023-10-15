@@ -19,14 +19,15 @@
     <nav>
         <h1>Luna Insight</h1>
         <ul class="navMenu">
-            <li class="navButton">Home</li>
-            <li class="navButton">Search</li>
-            <li class="navButton">Blogs</li>
-            <li class="navButton">Contact</li>
+            <a href="#header" class="navButton">Home</a>
+            <a href="#search" class="navButton">Search</a>
+            <a href="#topStories" class="navButton">Top Stories</a>
+            <a href="#bookReview" class="navButton">Book Review</a>
+            <a class="navButton">Contact</a>
         </ul>
     </nav>
 
-    <header>
+    <header id="header">
         <section class="headerArticle">
             <h1 class="headerTitle"></h1>
             <div class="headerTitleInfo">
@@ -57,7 +58,7 @@
 
     </header>
 
-    <section class="searchSection">
+    <section id="search" class="searchSection">
         <div class="searchBarContainer">
             <input class="searchBar" type="text" placeholder="Search The Keywords">
             <button class="searchButton">Search</button>
@@ -67,7 +68,7 @@
         
     </section>
 
-    <section class="topStories">
+    <section id="topStories" class="topStories">
         <div class="topStoriesSectionWrapper">
             <div class="topStoriesSectionContainer">
                 <span class="topStoriesSection" id="arts">arts</span>
@@ -90,20 +91,27 @@
                 <span class="topStoriesSection" id="obituaries">obituaries</span>
                 <span class="topStoriesSection" id="realestate">realestate</span>
             </div>
-            <img class="forwardButton arrowButton" src="assests/next.png" alt="">
-            <img class="backwardButton arrowButton" src="assests/next.png" alt="">
+            <img class="forwardButton arrowButton" src="assests/arrow.png" alt="">
+            <img class="backwardButton arrowButton" src="assests/arrow.png" alt="">
         </div>
         
 
         <div class="topStoriesContainer"></div>
     </section>
 
-    <section class="bookReview">
+    <section id="bookReview" class="bookReview">
         <h1 class="bookReviewHeading">Literary Insights:-</h1>
         <div class="bookReviewWrapper"></div>
         
         <img src="assests/arrow.png" class="bookForwardButton bookArrowButton">
         <img src="assests/arrow.png" class="bookBackwardButton bookArrowButton">
+    </section>
+
+    <section class="contact">
+        <h1>Contact Me</h1>
+        <div class="contactLinks">
+            
+        </div>
     </section>
     
     <script src="script.js"></script>

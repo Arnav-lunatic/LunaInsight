@@ -170,18 +170,25 @@ async function showBookReview() {
     const bookReview = await fetch('https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=' + apiKey)
 
     const bookReviewData = await bookReview.json()
-    
-    for (let i = 0; i < 15; i++) {
-        document.querySelector('.bookReviewWrapper').innerHTML += `
-        <a class="bookReviewLink" href="${bookReviewData.results.books[i].amazon_product_url}">
-            <div class="bookContainer">
-                <img class="bookCover" src="${bookReviewData.results.books[i].book_image}" >
-                <h2 class="bookTitle">${bookReviewData.results.books[i].title}</h2>
-                <h6 class="bookAuthor">${bookReviewData.results.books[i].author}</h6>
-            
-                <p class="bookDiscribtion">${bookReviewData.results.books[i].description}</p>
-            </div>
-        </a>`
+
+    try {
+        const bookReviewResult = bookReviewData.results
+
+        for (let i = 0; i < 15; i++) {
+            document.querySelector('.bookReviewWrapper').innerHTML += `
+            <a class="bookReviewLink" href="${bookReviewResult.books[i].amazon_product_url}">
+                <div class="bookContainer">
+                    <img class="bookCover" src="${bookReviewResult.books[i].book_image}" >
+                    <h2 class="bookTitle">${bookReviewResult.books[i].title}</h2>
+                    <h6 class="bookAuthor">${bookReviewResult.books[i].author}</h6>
+                
+                    <p class="bookDiscribtion">${bookReviewResult.books[i].description}</p>
+                </div>
+            </a>`
+        }
+        
+    } catch (error) {
+        document.querySelector('.bookReview').style.display = 'none'
     }
     
 }
@@ -192,13 +199,13 @@ showBookReview()
 const BookScrollContainer = document.querySelector('.bookReviewWrapper')
 
 document.querySelector('.bookForwardButton').addEventListener('click', () => {
-    BookScrollContainer.scrollLeft += 300
+    BookScrollContainer.scrollLeft -= 300
 })
 document.querySelector('.bookBackwardButton').addEventListener('click', () => {
-    BookScrollContainer.scrollLeft -= 300
+    BookScrollContainer.scrollLeft += 300
 })
 
 BookScrollContainer.addEventListener('wheel', (e) => {
     e.preventDefault()
-    BookScrollContainer.scrollLeft += e.deltaY
+    e.deltaY > 0 ? BookScrollContainer.scrollLeft += e.deltaY + 200: BookScrollContainer.scrollLeft += e.deltaY - 200
 })

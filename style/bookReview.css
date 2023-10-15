@@ -8,10 +8,6 @@
     margin-bottom: clamp(10px, 2vw, 50px);
 }
 
-.bookReviewLink {
-
-}
-
 .bookContainer {
     width: clamp(100px, 40vw, 250px);
     padding-left: clamp(5px, 2vw, 40px);
@@ -21,6 +17,21 @@
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
+}
+
+/* width */
+.bookReviewWrapper::-webkit-scrollbar {
+    height: 2px;
+}
+  
+/* Track */
+.bookReviewWrapper::-webkit-scrollbar-track {
+    background: #555;
+}
+  
+/* Handle */
+.bookReviewWrapper::-webkit-scrollbar-thumb {
+    background: #fff;
 }
 
 .bookCover {
@@ -54,8 +65,9 @@
 }
 
 .bookArrowButton {
+    display: none;
     position: absolute;
-    background: #000;
+    background: #212121;
     padding: 20px 5px;
     border-radius: 10px;
     top: 50%;
@@ -70,4 +82,11 @@
 
 .bookBackwardButton {
     right: 10px;
+    transform: translateY(-50%);
+}
+
+@media screen and (min-width: 900px) {
+    .bookArrowButton {
+        display: inline;
+    }
 }
