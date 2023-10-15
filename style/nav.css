@@ -105,6 +105,9 @@ nav h1 {
     .hamMenu {
         display: none;
     }
+    .slideMenu {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 1200px) {

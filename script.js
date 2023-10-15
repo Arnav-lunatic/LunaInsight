@@ -1,4 +1,4 @@
-const apiKey = 'sSasVjjGp7OnXVkkIGb0Edn8qIBZi2Jb'
+const apiKey = 'EF9pGkGyJfYa1KoKJEx4AhJQGAvAnE1l'
 
 // =======================loader=======================
 function animation() {
@@ -115,12 +115,12 @@ document.querySelector('.showMoreTopArticles').addEventListener('click', () => {
     if (showMore) {
         length = 10
         document.querySelector('.showLessTopArticles').innerHTML = 'Show less'
-        document.querySelector('.showMoreTopArticles svg').style.rotate = '180deg'
+        document.querySelector('.showMoreTopArticles img').style.rotate = '180deg'
         showMore = false
     } else if (!showMore) {
         length = 4
         document.querySelector('.showLessTopArticles').innerHTML = 'Show more'
-        document.querySelector('.showMoreTopArticles svg').style.rotate = '-180deg'
+        document.querySelector('.showMoreTopArticles img').style.rotate = '-180deg'
         document.querySelector('.otherHeaderArticleContainer').innerHTML = ''
         showMore = true
     }
@@ -243,6 +243,7 @@ async function showBookReview() {
         }
         
     } catch (error) {
+        console.log(error);
         document.querySelector('.bookReview').style.display = 'none'
     }
     
