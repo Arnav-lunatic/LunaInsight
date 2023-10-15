@@ -1,5 +1,25 @@
 const apiKey = 'sSasVjjGp7OnXVkkIGb0Edn8qIBZi2Jb'
 
+// =======================navMenu=======================
+const hamMenuFirst = document.querySelector('.hamMenuFirst')
+const hamMenuSecond = document.querySelector('.hamMenuSecond')
+const slideMenu = document.querySelector('.slideMenu')
+
+let hamMenuClicked = false
+document.querySelector('.hamMenu').addEventListener('click', () => {
+    if (!hamMenuClicked) {
+        hamMenuFirst.style.width = '35px'
+        hamMenuSecond.style.width = '35px'
+        slideMenu.style.right = '0'
+        hamMenuClicked = true
+    } else {
+        hamMenuFirst.style.width = '25px'
+        hamMenuSecond.style.width = '30px'
+        slideMenu.style.right = '-170px'
+        hamMenuClicked = false
+    }
+})
+
 // =======================Header=======================
 let length = 4
 async function showNews() {

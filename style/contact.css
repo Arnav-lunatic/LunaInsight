@@ -1,0 +1,51 @@
+.contact {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.contact h1 {
+    font-size: clamp(0.1em, 5vw, 2.5em);
+    padding: clamp(2px, 1vw, 10px);
+    letter-spacing: 2px;
+    color: #212121;
+    background-color: #fff;
+}
+
+.contactLinks {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+}
+
+.contactIcon {
+    width: clamp(8px, 5vw, 40px);
+    height: 100%;
+    background-color: #fff;
+}
+
+.devDetails {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.devDetails p{
+    font-size: clamp(.8em, 2vw, 1.3em);
+    background-color: #fff;
+    color: #212121;
+}
+
+@media screen and (min-width:900px) {
+    .contact {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .tradeMark {
+        -webkit-text-stroke: 2px #212121;
+    }
+    .devDetails {
+        margin-top: 0;
+    }
+}

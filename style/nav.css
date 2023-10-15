@@ -18,8 +18,55 @@ nav h1 {
     cursor: pointer;
 }
 
+.hamMenu {
+    display: grid;
+    justify-items: end;
+    cursor: pointer;
+}
+.hamMenuLine {
+    height: 4px;
+    width: 35px;
+    background: #fff;
+    border-radius: 2px;
+    transition: .3s;
+}
+.hamMenuFirst {
+    margin-bottom: 5px;
+    width: 25px;
+}
+
+.hamMenuSecond {
+    margin-bottom: 5px;
+    width: 30px;
+}
+
+.slideMenu {
+    display: grid;
+    gap: 5px;
+    position: absolute;
+    top: 50px;
+    right: -170px;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    background-color: #21212150;
+    backdrop-filter: blur(3px);
+    padding: 5px;
+    border-radius: 15px;
+    z-index: 100;
+    transition: .5s;
+    border: 1px solid #ffffff50;
+}
+.slideMenuButton {
+    background-color: transparent;
+}
+
+.slideMenuButton:hover {
+    text-decoration: underline;
+}
+
 .navMenu {
-    display: flex;
+    display: none;
     list-style: none;
 }
 
@@ -51,6 +98,12 @@ nav h1 {
     nav {
         font-size: 18px;
         padding: 15px 0px 5px 15px;
+    }
+    .navMenu {
+        display: flex;
+    }
+    .hamMenu {
+        display: none;
     }
 }
 
