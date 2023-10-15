@@ -4,7 +4,7 @@ const apiKey = 'EF9pGkGyJfYa1KoKJEx4AhJQGAvAnE1l'
 function animation() {
     setTimeout(() => {
         document.querySelector('.animationSec1').style.animation = 'loading 1s'
-    }, 0);
+    }, 100);
     setTimeout(() => {
         document.querySelector('.animationSec2').style.animation = 'loading 1s'
     }, 1000);

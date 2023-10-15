@@ -37,37 +37,23 @@
 
 @keyframes loading {
     0% {
-        background-color: #fffffff5;
-    }
-    10% {
-        background-color: #ffffffc5;
-    }
-    20% {
-        background-color: #ffffff50;
-    }
-    30% {
-        background-color: #ffffff75;
-    }
-    40% {
         background-color: #ffffff42;
+
+    }
+    25% {
+        background-color: #ffffff75;
+
     }
     50% {
-        background-color: #ffffff00;
+        background-color: #ffffff81;
     }
-    60% {
-        background-color: #ffffff42;
-    }
-    70% {
-        background-color: #ffffff75;
-    }
-    80% {
-        background-color: #ffffff50;
-    }
-    90% {
+    75% {
         background-color: #ffffffc5;
+
     }
     100% {
-        background-color: #fff;
+        background-color: #fffffff5;
+
     }
 }
 
