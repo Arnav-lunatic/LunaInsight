@@ -116,6 +116,7 @@ document.querySelector('.showMoreTopArticles').addEventListener('click', () => {
         length = 10
         document.querySelector('.showLessTopArticles').innerHTML = 'Show less'
         document.querySelector('.showMoreTopArticles img').style.rotate = '180deg'
+
         showMore = false
     } else if (!showMore) {
         length = 4
@@ -129,13 +130,13 @@ document.querySelector('.showMoreTopArticles').addEventListener('click', () => {
 
 // =======================Search=======================
 document.querySelector('.searchButton').addEventListener('click', () => {
-    document.querySelector('.searchResult').innerHTML = ''
+    document.querySelector('.searchResult').innerHTML = `<img src="assests/loader.png" class="loadingContent">`
     const filter = document.querySelector('.searchBar').value
     searchKeywords(filter)
 })
 document.querySelector('.searchBar').addEventListener('keypress', (e) => {
-    if (e.key = 'Enter') {
-        document.querySelector('.searchResult').innerHTML = ''
+    if (e.key === 'Enter') {
+        document.querySelector('.searchResult').innerHTML = `<img src="assests/loader.png" class="loadingContent">`
         const filter = document.querySelector('.searchBar').value
         searchKeywords(filter)
     }
@@ -145,6 +146,8 @@ async function searchKeywords(filter) {
     const searchNews = await fetch(`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${filter}&api-key=` + apiKey)
 
     const searchNewsData = await searchNews.json()
+
+    document.querySelector('.searchResult').innerHTML = ''
 
     for (let i = 0; i < 9; i++) {
         document.querySelector('.searchResult').innerHTML += `
@@ -159,9 +162,13 @@ async function searchKeywords(filter) {
 
 // =======================Show Top Stories=======================
 async function showTopStories(section) {
+
     const topStories = await fetch(`https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=` + apiKey)
     
     const topStoriesData = await topStories.json()
+
+    document.querySelector('.topStoriesContainer').innerHTML = ''
+
 
     let imgSrc
     for (let i = 0; i < 3; i++) {
@@ -186,11 +193,14 @@ async function showTopStories(section) {
             </div>
         </a>`
     }    
+
 }
 
 // Stories Section Scroll Bar
 document.querySelectorAll('.topStoriesSection').forEach(element => {
     element.addEventListener('click', (e) => {
+        document.querySelector('.topStoriesContainer').innerHTML = `<img src="assests/loader.png" class="loadingContent">`
+
         // it will make all section normal
         document.querySelectorAll('.topStoriesSection').forEach(element => {
             element.style.backgroundColor = '#212121'
@@ -199,7 +209,6 @@ document.querySelectorAll('.topStoriesSection').forEach(element => {
         // change the color of clicked section
         e.target.style.backgroundColor = '#fff'
         e.target.style.color = '#212121'
-        document.querySelector('.topStoriesContainer').innerHTML = ''
         showTopStories(e.target.innerHTML)
     })
 });

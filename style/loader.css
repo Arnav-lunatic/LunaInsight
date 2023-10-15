@@ -71,3 +71,16 @@
     }
 }
 
+.loadingContent {
+    animation: loadContent 1s infinite;
+    margin: 20px;
+}
+
+@keyframes loadContent {
+    from {
+        rotate: 0deg;
+    }
+    to {
+        rotate: 359deg;
+    }
+}
