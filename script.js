@@ -3,29 +3,29 @@ const apiKey = 'EF9pGkGyJfYa1KoKJEx4AhJQGAvAnE1l'
 // =======================loader=======================
 function animation() {
     setTimeout(() => {
-        document.querySelector('.animationSec1').style.animation = 'loading 4s'
+        document.querySelector('.animationSec1').style.animation = 'loading 1s'
     }, 0);
     setTimeout(() => {
-        document.querySelector('.animationSec2').style.animation = 'loading 4s'
+        document.querySelector('.animationSec2').style.animation = 'loading 1s'
+    }, 1000);
+    setTimeout(() => {
+        document.querySelector('.animationSec4').style.animation = 'loading 1s'
     }, 2000);
     setTimeout(() => {
-        document.querySelector('.animationSec4').style.animation = 'loading 4s'
+        document.querySelector('.animationSec3').style.animation = 'loading 1s'
     }, 4000);
-    setTimeout(() => {
-        document.querySelector('.animationSec3').style.animation = 'loading 4s'
-    }, 6000);
     setTimeout(() => {
         document.querySelector('.animationSec1').style.animation = ''
         document.querySelector('.animationSec2').style.animation = ''
         document.querySelector('.animationSec3').style.animation = ''
         document.querySelector('.animationSec4').style.animation = ''
-    }, 10000)
+    }, 5000)
 }
 animation()
 
 let restartAnimation = setInterval(() => {
     animation()
-}, 10001);
+}, 5001);
 
 
 // =======================navMenu=======================
