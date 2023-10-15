@@ -1,6 +1,7 @@
 .searchSection {
     display: grid;
-    padding: clamp(10px, 10vw, 50px) clamp(5px, 2vw, 40px);
+    padding: clamp(10px, 5vw, 50px) clamp(5px, 2vw, 40px);
+    padding-bottom: clamp(5px, 5vw, 20px);
     margin: 0 auto;
 }
 
@@ -13,23 +14,23 @@
 }
 
 .searchBar {
-    width: 90%;
+    width: 88%;
     font-size: clamp(1rem, 2vw, 1.5rem);
-    border: 1px solid;
+    border: 2px solid;
     border-radius: 5px 0px 0px 5px;
     padding: clamp(2px, 2vw, 5px);
     outline: none;
 }
 
 .searchButton {
-    width: 10%;
+    width: 12%;
     border: 1px solid #fff;
     margin-left: -1px;
     border-radius: 0px 5px 5px 0px;
     background-color: #fff;
     color: #212121;
     font-weight: 700;
-    font-size: clamp(0.7rem, 2vw, 1.3rem);
+    font-size: clamp(0.7rem, 2vw, 1.6rem);
 }
 
 

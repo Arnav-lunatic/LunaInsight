@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="style/nav.css">
     <link rel="stylesheet" href="style/header.css">
     <link rel="stylesheet" href="style/search.css">
+    <link rel="stylesheet" href="style/bookReview.css">
+    <link rel="stylesheet" href="style/topStories.css">
 
     <link rel="shortcut icon" href="assests/news.png" type="image/x-icon">
 
@@ -46,58 +48,13 @@
             
 
         <section class="otherHeaderArticle">
-            <a class="OtherArticleWrapper" target="_blank">
-                <img src="assests/" class="otherTopNewsImage">
-
-                <div class="otherArticleInfo">
-                    <h1 class="otherHeaderTitle"></h1>
-
-                    <div class="otherHeaderTitleInfo">
-                        <span class="otherNewsby"></span>
-                        <span class="otherNewsdate"></span>
-                    </div>
-                </div>
-            </a>
-
-            <a class="OtherArticleWrapper" target="_blank">
-                <img src="" class="otherTopNewsImage">
-
-                <div class="otherArticleInfo">
-                    <h1 class="otherHeaderTitle"></h1>
-
-                    <div class="otherHeaderTitleInfo">
-                        <span class="otherNewsby"></span>
-                        <span class="otherNewsdate"></span>
-                    </div>
-                </div>
-            </a>
-
-            <a class="OtherArticleWrapper" target="_blank">
-                <img src="" class="otherTopNewsImage">
-
-                <div class="otherArticleInfo">
-                    <h1 class="otherHeaderTitle"></h1>
-
-                    <div class="otherHeaderTitleInfo">
-                        <span class="otherNewsby"></span>
-                        <span class="otherNewsdate"></span>
-                    </div>
-                </div>
-            </a>
-
-            <a class="OtherArticleWrapper" target="_blank">
-                <img src="" class="otherTopNewsImage">
-
-                <div class="otherArticleInfo">
-                    <h1 class="otherHeaderTitle"></h1>
-
-                    <div class="otherHeaderTitleInfo">
-                        <span class="otherNewsby"></span>
-                        <span class="otherNewsdate"></span>
-                    </div>
-                </div>
-            </a>
+            <div class="otherHeaderArticleContainer"></div>
+            <button class="showMoreTopArticles">
+                <span class="showLessTopArticles">Show more</span>
+                <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.0006L7.75732 10.758L9.17154 9.34375L12 12.1722L14.8284 9.34375L16.2426 10.758L12 15.0006Z"></path></svg>
+            </button>
         </section>
+
     </header>
 
     <section class="searchSection">
@@ -106,9 +63,47 @@
             <button class="searchButton">Search</button>
         </div>
 
-        <section class="searchResult">
-            
-        </section>
+        <section class="searchResult"></section>
+        
+    </section>
+
+    <section class="topStories">
+        <div class="topStoriesSectionWrapper">
+            <div class="topStoriesSectionContainer">
+                <span class="topStoriesSection" id="arts">arts</span>
+                <span class="topStoriesSection" id="technology">technology</span>
+                <span class="topStoriesSection" id="home">home</span>
+                <span class="topStoriesSection" id="science">science</span>
+                <span class="topStoriesSection" id="us">us</span>
+                <span class="topStoriesSection" id="worautomobilesld">automobiles</span>
+                <span class="topStoriesSection" id="books">books</span>
+                <span class="topStoriesSection" id="business">business</span>
+                <span class="topStoriesSection" id="fashion">fashion</span>
+                <span class="topStoriesSection" id="food">food</span>
+                <span class="topStoriesSection" id="health">health</span>
+                <span class="topStoriesSection" id="politics">politics</span>
+                <span class="topStoriesSection" id="sports">sports</span>
+                <span class="topStoriesSection" id="theater">theater</span>
+                <span class="topStoriesSection" id="travel">travel</span>
+                <span class="topStoriesSection" id=" books/review"> books/review</span>
+                <span class="topStoriesSection" id="magazine">magazine</span>
+                <span class="topStoriesSection" id="obituaries">obituaries</span>
+                <span class="topStoriesSection" id="realestate">realestate</span>
+            </div>
+            <img class="forwardButton arrowButton" src="assests/next.png" alt="">
+            <img class="backwardButton arrowButton" src="assests/next.png" alt="">
+        </div>
+        
+
+        <div class="topStoriesContainer"></div>
+    </section>
+
+    <section class="bookReview">
+        <h1 class="bookReviewHeading">Literary Insights:-</h1>
+        <div class="bookReviewWrapper"></div>
+        
+        <img src="assests/arrow.png" class="bookForwardButton bookArrowButton">
+        <img src="assests/arrow.png" class="bookBackwardButton bookArrowButton">
     </section>
     
     <script src="script.js"></script>

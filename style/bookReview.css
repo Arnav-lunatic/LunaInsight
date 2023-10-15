@@ -1,0 +1,73 @@
+.bookReview {
+    padding: clamp(10px, 10vw, 100px) clamp(5px, 2vw, 40px);
+    position: relative;
+}
+
+.bookReviewHeading {
+    font-size: clamp(1rem, 5vw, 2rem);
+    margin-bottom: clamp(10px, 2vw, 50px);
+}
+
+.bookReviewLink {
+
+}
+
+.bookContainer {
+    width: clamp(100px, 40vw, 250px);
+    padding-left: clamp(5px, 2vw, 40px);
+}
+
+.bookReviewWrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.bookCover {
+    width: 100%;
+    height: clamp(150px, 50vw, 350px);
+    border-radius: 15px 15px 0 0;
+}
+
+.bookTitle {
+    font-size: clamp(.9rem, 2vw, 1.3rem);
+    background-color: #fff;
+    color: #000;
+    margin-top: -5px;
+    padding: 5px;
+}
+
+.bookAuthor {
+    font-size: clamp(.8em, 2vw, 1em);
+    background-color: #fff;
+    color: #00000095;
+    padding-left: 5px;
+}
+
+.bookDiscribtion {
+    font-size: clamp(.5em, 2vw, .8em);
+    opacity: .9;
+    padding: 8px;
+    border: 2px solid;
+    border-radius: 0 0 15px 15px;
+    min-height: 80px;
+}
+
+.bookArrowButton {
+    position: absolute;
+    background: #000;
+    padding: 20px 5px;
+    border-radius: 10px;
+    top: 50%;
+    border: 2px solid;
+    cursor: pointer;
+}
+
+.bookForwardButton {
+    left: 10px;
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.bookBackwardButton {
+    right: 10px;
+}

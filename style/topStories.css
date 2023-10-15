@@ -1,0 +1,103 @@
+.topStories {
+    padding: 0 clamp(5px, 2vw, 40px);
+}
+
+.topStoriesSectionContainer {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.topStoriesSection {
+    background-color: #212121;
+    color: #fff;
+    font-weight: 600;
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    padding: 2px 5px;
+    margin: clamp(5px, 2vw, 15px);
+    border-radius: 3px;
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+
+#arts {
+    margin-left: 50px;
+}
+#realestate {
+    margin-right: 50px;
+}
+
+.topStoriesSectionWrapper {
+    position: relative;
+}
+
+.arrowButton {
+    display: none;
+    position: absolute;
+    border: none;
+    top: 50%;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    cursor: pointer;
+
+}
+
+.forwardButton {
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.backwardButton {
+    transform: translateY(-50%) rotate(180deg);
+    left: 0;
+}
+
+.topStoriesContainer {
+    display: grid;
+    justify-items: center;
+    margin: clamp(10px, 5vw, 30px);
+}
+
+.topStoriesWrapper {
+    width: clamp(200px, 90vw, 500px);
+    padding-bottom: clamp(40px, 2vw, 100px);
+}
+
+.topStoriesImg {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+@media screen and (min-width: 900px) {
+    .arrowButton {
+        display: inline;
+    }
+    .topStoriesWrapper {
+        display: flex;
+        width: clamp(800px, 90vw, 1500px);
+    }
+    .topStoriesImg {
+        margin-right: 20px;
+    }
+}
+
+.topStoriesTitle{
+    font-size: clamp(1.5rem, 2vw, 2rem);
+}
+
+.topStoriesBy{
+    opacity: .5;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    padding-bottom: 10px;
+}
+
+.topStoriesAbstract{
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+#technology {
+    background-color: #fff;
+    color: #212121;
+}
