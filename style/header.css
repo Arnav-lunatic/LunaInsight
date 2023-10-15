@@ -69,7 +69,6 @@ header {
 .topNewsReadMoreButton{
     display: flex;
     align-items: center;
-    width: 101px;
     border: 1px solid;
     padding: 5px;
     cursor: pointer;
